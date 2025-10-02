@@ -2,8 +2,8 @@
 # 💔 ArtPixel
 
 Simple, I created it based on a GitHub post on LinkedIn, thinking I might find it a job and/or demand. I created it on October 1, 2025, the day I resigned from my job.
-
 ---
+
 This project implements a retro CRT-style interface with animated pixel art.
 The animation is rendered on a canvas using frames described in JSON, allowing you to create custom pixel art-style animations.
 ---
