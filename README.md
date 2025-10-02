@@ -6,7 +6,7 @@ Simple, I created it based on a GitHub post on LinkedIn, thinking I might find i
 
 This project implements a retro CRT-style interface with animated pixel art.
 The animation is rendered on a canvas using frames described in JSON, allowing you to create custom pixel art-style animations.
----
+
 
 **👉 Try it live here**: [web](https://gustavo-de-lima-g-000-akiko-yuuuki.github.io/ArtPixel.github.io/)
 
