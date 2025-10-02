@@ -1,7 +1,7 @@
 
 # ArtPixel
 
-Simple, I created it based on a GitHub post within LinkedIn, thinking that maybe GitHub and/or associates and partners have a job or demand for me. Created on 10/1/25, the day I resigned from a job where the owners themselves do not want to improve or change the company's processes, services, etc., and the company's organization, culture, and demands are really terrible.
+Simple, I created it based on a GitHub post on LinkedIn, thinking that perhaps GitHub and/or its associates and partners had a job or a need for me. I created it on October 1, 2025, the day I quit my job.
 ---
 This project implements a retro CRT-style interface with animated pixel art.
 The animation is rendered on a canvas using frames described in JSON, allowing you to create custom pixel art-style animations.
