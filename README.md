@@ -7,7 +7,9 @@ This project implements a retro CRT-style interface with animated pixel art.
 The animation is rendered on a canvas using frames described in JSON, allowing you to create custom pixel art-style animations.
 ---
 
-[Assista à demonstração em vídeo](output_progressive_b0aca48d-2179-43ba-a50f-4614e818c0da.mp4?raw=true)
+![Descrição do GIF](https://github.com/Gustavo-de-Lima-G-000-Akiko-Yuuuki/ArtPixel.github.io/blob/main/gif%20original.gif?raw=true)
+
+![Descrição do GIF](https://github.com/Gustavo-de-Lima-G-000-Akiko-Yuuuki/ArtPixel.github.io/blob/main/gif%20diy.gif?raw=true)
 
 ## 📂 Project Structure
 
