@@ -1,7 +1,8 @@
 # ArtPixel
 Simple, I created it based on a GitHub post within LinkedIn, thinking that maybe GitHub and/or associates and partners have a job or demand for me. Created on 10/1/25, the day I resigned from a job where the owners themselves do not want to improve or change the company's processes, services, etc., and the company's organization, culture, and demands are really terrible.
-Este projeto implementa uma **interface retro em estilo CRT com pixel art animada**.  
-A animação é renderizada em um `<canvas>` a partir de quadros (`frames`) descritos em JSON, permitindo criar animações personalizadas em estilo **pixel art**.
+
+This project implements a retro CRT-style interface with animated pixel art.
+The animation is rendered on a canvas using frames described in JSON, allowing you to create custom pixel art-style animations.
 ---
 
 ## 📂 Project Structure
