@@ -2,124 +2,111 @@
 Simple, I created it based on a GitHub post within LinkedIn, thinking that maybe GitHub and/or associates and partners have a job or demand for me. Created on 10/1/25, the day I resigned from a job where the owners themselves do not want to improve or change the company's processes, services, etc., and the company's organization, culture, and demands are really terrible.
 Este projeto implementa uma **interface retro em estilo CRT com pixel art animada**.  
 A animação é renderizada em um `<canvas>` a partir de quadros (`frames`) descritos em JSON, permitindo criar animações personalizadas em estilo **pixel art**.
-
 ---
 
-## 🚀 Tecnologias Utilizadas
-
-- **HTML5** – Estrutura da página
-- **CSS3** – Estilização com efeitos retro (CRT glow, scanlines, moldura animada)
-- **JavaScript (ES6)** – Renderização da animação em canvas
-- **JSON** – Armazenamento dos frames da pixel art
-- **Canvas API** – Desenho eficiente de pixels no navegador
-
----
-
-## 📂 Estrutura do Projeto
+## 📂 Project Structure
 
 ```
 /
-├── index.html                  # Arquivo principal da aplicação
-├── pixelart_frames_72x56_full.json # Arquivo contendo os frames da animação
-├── /assets                     # (opcional) Pasta para outros recursos
-└── README.md                   # Documentação do projeto
+├── index.html # Main application file
+├── pixelart_frames_72x56_full.json # File containing the animation frames
+├── /assets # (optional) Folder for other resources
+└── README.md # Project documentation
 ```
 
 ---
 
-## 📖 Funcionamento Técnico
+## 📖 Technical Operation
 
-### 1. Estrutura HTML
-- O HTML define uma **moldura retro CRT** contendo:
-  - `canvas` (`id="arte"`) onde a animação é desenhada.
-  - Efeitos visuais como scanlines, bordas luminosas e tremor da tela.
-  - Um **rodapé de status** com texto animado `"Pensando..."`.
+### 1. HTML Structure
+- The HTML defines a **retro CRT frame** containing:
+- `canvas` (`id="arte"`) where the animation is drawn.
+- Visual effects such as scanlines, light edges, and screen shake.
+- A **status footer** with animated text `"Thinking..."`.
 
-### 2. Estilo CSS
-- Uso de **variáveis CSS** (`:root`) para definir paleta de cores.
-- Efeitos de:
-  - **Glow CRT** (`box-shadow`, `drop-shadow`).
-  - **Scanlines** (`repeating-linear-gradient`).
-  - **Flicker** (`@keyframes tremor`).
-  - **Entrada suave** da interface (`@keyframes entrada`).
+### 2. CSS Style
+- Using CSS variables (`:root`) to define the color palette.
+- Effects:
+- Glow CRT (`box-shadow`, `drop-shadow`).
+- Scanlines (`repeating-linear-gradient`).
+- Flicker (`@keyframes tremor`).
+- Smooth interface input (`@keyframes input`).
 
-### 3. Paleta de Cores
-A paleta é definida em um objeto JavaScript que mapeia símbolos para cores:
+### 3. Color Palette
+The palette is defined in a JavaScript object that maps symbols to colors:
 
 ```js
-const paletaCores = {
-  'k': '#0b0b10', // preto
-  'P': '#b66bff', // roxo claro
-  'p': '#a455f7', // roxo escuro
-  'B': '#77c7ff', // azul claro
-  'b': '#5bb1ef', // azul escuro
-  'G': '#8ef1a0', // verde
-  'W': '#ffffff', // branco
-  '.': null       // transparente
+const colorPalette = {
+'k': '#0b0b10', // black
+'P': '#b66bff', // light purple
+'p': '#a455f7', // dark purple
+'B': '#77c7ff', // light blue
+'b': '#5bb1ef', // dark blue
+'G': '#8ef1a0', // green
+'W': '#ffffff', // white
+'.': null // transparent
 };
 ```
 
-Cada quadro da animação é representado como uma **matriz de caracteres**, em que cada símbolo corresponde a uma cor.
+Each frame of the animation is represented as a **character array**, where each symbol corresponds to a color.
 
-### 4. Animação
-- O script carrega `pixelart_frames_72x56_full.json` via **fetch API**.
-- A função `iniciarAnimacao` controla o ciclo:
-  - `desenhar()` – Renderiza um quadro no canvas.
-  - `requestAnimationFrame` – Sincroniza os frames na taxa configurada (`FPS = 30`).
-  - Ajuste automático ao `resize` da janela.
+### 4. Animation
+- The script loads `pixelart_frames_72x56_full.json` via **fetch API**. - The `iniciarAnimacao` function controls the cycle:
+- `desenhar()` – Renders a frame on the canvas.
+- `requestAnimationFrame` – Synchronizes frames at the configured rate (`FPS = 30`).
+- Automatic adjustment to window resize.
 
 ---
 
-## 🖼️ Como Criar Novos Frames
+## 🖼️ How to Create New Frames
 
-Cada frame é um **array bidimensional** no JSON:
+Each frame is a two-dimensional array in JSON:
 
 ```json
 [
-  ["k","k","k","B","B"],
-  ["k","P","P","B","k"],
-  ["k","p","p","B","k"],
-  ["k","k","k","k","k"]
+["k","k","k","B","B"],
+["k","P","P","B","k"],
+["k","p","p","B","k"],
+["k","k","k","k","k"]
 ]
 ```
 
-- Cada string é um símbolo da paleta (`k`, `P`, `p`, `B`, etc.).
-- O canvas é redimensionado automaticamente para a largura/altura do frame.
+- Each string is a symbol from the palette (`k`, `P`, `p`, `B`, etc.). - The canvas is automatically resized to the width/height of the frame.
 
 ---
 
-## ▶️ Como Executar
+## ▶️ How to Run
 
-1. Clone o repositório ou copie os arquivos:
-   ```bash
-   git clone https://github.com/seuusuario/artpixel.git
-   cd artpixel
-   ```
+1. Clone the repository or copy the files:
+```bash
+git clone https://github.com/yourusername/artpixel.git
+cd artpixel
+```
 
-2. Certifique-se de que `index.html` e `pixelart_frames_72x56_full.json` estão na mesma pasta.
+2. Make sure `index.html` and `pixelart_frames_72x56_full.json` are in the same folder.
 
-3. Abra o arquivo `index.html` no navegador.
-
----
-
-## ⚙️ Configurações Opcionais
-
-- **FPS**: Pode ser ajustado na constante do script:
-  ```js
-  const FPS = 30; // Altere para 60 para animação mais fluida
-  ```
-
-- **Cores**: Adicione ou modifique símbolos no objeto `paletaCores`.
-
-- **Tamanho**: Alterando o JSON de frames, a resolução da pixel art também é ajustada automaticamente.
+3. Open the `index.html` file in the browser.
 
 ---
 
-## 📌 Acessibilidade
-- O `role="img"` e `aria-label` foram adicionados para leitores de tela.
-- O `canvas` tem `aria-hidden="true"` para não atrapalhar a navegação assistiva.
+## ⚙️ Optional Settings
+
+- **FPS**: Can be adjusted in the script constant:
+```js
+const FPS = 30; // Change to 60 for smoother animation
+```
+
+- **Colors**: Add or modify symbols in the `paletaCores` object.
+
+- **Size**: By changing the frame JSON, the pixel art resolution is also automatically adjusted.
 
 ---
 
-## ✨ Autor
-Projeto desenvolvido por **Gustavo Lima G (AKIKO_YUUKI)**.  
+## 📌 Accessibility
+- The `role="img"` and `aria-label` have been added for screen readers.
+- The `canvas` has `aria-hidden="true"` to avoid interfering with assistive navigation.
+
+---
+
+## ✨ Author
+Project developed by **Gustavo Lima G (AKIKO_YUUKI)**.
