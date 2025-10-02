@@ -1,5 +1,5 @@
 
-# ArtPixel
+# 💔 ArtPixel
 
 Simple, I created it based on a GitHub post on LinkedIn, thinking that perhaps GitHub and/or its associates and partners had a job or a need for me. I created it on October 1, 2025, the day I quit my job.
 ---
